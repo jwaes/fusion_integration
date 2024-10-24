@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Security Groups -->
+        <record id="group_fusion_editor" model="res.groups">
+            <field name="name">Fusion Editor</field>
+            <field name="category_id" ref="base.module_category_manufacturing"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="comment">Users can create/edit fusion components and products</field>
+        </record>
+
+        <record id="group_fusion_admin" model="res.groups">
+            <field name="name">Fusion Administrator</field>
+            <field name="category_id" ref="base.module_category_manufacturing"/>
+            <field name="implied_ids" eval="[(4, ref('group_fusion_editor'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="comment">Full access to fusion integration including configuration</field>
+        </record>
+
+        <!-- Record Rules -->
+        <!-- Read access for users with product access -->
+        <record id="rule_fusion_component_product_user" model="ir.rule">
+            <field name="name">Fusion Component Product User Access</field>
+            <field name="model_id" ref="model_fusion_component"/>
+            <field name="groups" eval="[(4, ref('stock.group_stock_user'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- Full access for fusion editors -->
+        <record id="rule_fusion_component_editor" model="ir.rule">
+            <field name="name">Fusion Component Editor Access</field>
+            <field name="model_id" ref="model_fusion_component"/>
+            <field name="groups" eval="[(4, ref('group_fusion_editor'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- Settings access for fusion admins -->
+        <record id="rule_fusion_settings_admin" model="ir.rule">
+            <field name="name">Fusion Settings Admin Access</field>
+            <field name="model_id" ref="model_res_config_settings"/>
+            <field name="groups" eval="[(4, ref('group_fusion_admin'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+    </data>
+</odoo>

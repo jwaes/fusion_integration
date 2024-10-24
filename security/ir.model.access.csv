@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_fusion_component_user,fusion.component.user,model_fusion_component,stock.group_stock_user,1,0,0,0
+access_fusion_component_editor,fusion.component.editor,model_fusion_component,group_fusion_editor,1,1,1,1
+access_fusion_component_admin,fusion.component.admin,model_fusion_component,group_fusion_admin,1,1,1,1
