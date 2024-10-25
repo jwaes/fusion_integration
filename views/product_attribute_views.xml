@@ -36,7 +36,7 @@
     </record>
 
     <!-- Search View -->
-    <record id="product_attribute_view_search_fusion" model="ir.ui.view">
+    <!-- <record id="product_attribute_view_search_fusion" model="ir.ui.view">
         <field name="name">product.attribute.search.fusion</field>
         <field name="model">product.attribute</field>
         <field name="inherit_id" ref="product.product_attribute_view_search"/>
@@ -59,7 +59,7 @@
                         context="{'group_by': 'is_fusion_attribute'}"/>
             </group>
         </field>
-    </record>
+    </record> -->
 
     <!-- Action Window -->
     <record id="action_fusion_product_attributes" model="ir.actions.act_window">
