@@ -14,6 +14,7 @@
         'security/ir.model.access.csv',
         'views/res_config_settings_views.xml',
         'views/product_attribute_views.xml',
+        'views/fusion_component_views.xml',
     ],
     'demo': [],
     'test': [
