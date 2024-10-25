@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!-- Tree View -->
-    <record id="product_attribute_view_tree_fusion" model="ir.ui.view">
+    <record id="attribute_tree_view_fusion" model="ir.ui.view">
         <field name="name">product.attribute.tree.fusion</field>
         <field name="model">product.attribute</field>
-        <field name="inherit_id" ref="product.product_attribute_view_tree"/>
+        <field name="inherit_id" ref="product.attribute_tree_view"/>
         <field name="arch" type="xml">
             <field name="name" position="after">
                 <field name="is_fusion_attribute"/>
