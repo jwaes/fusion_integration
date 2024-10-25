@@ -4,7 +4,7 @@
     <record id="product_attribute_view_tree_fusion" model="ir.ui.view">
         <field name="name">product.attribute.tree.fusion</field>
         <field name="model">product.attribute</field>
-        <field name="inherit_id" ref="product.attribute_tree_view"/>
+        <field name="inherit_id" ref="product.product_attribute_view_tree"/>
         <field name="arch" type="xml">
             <field name="name" position="after">
                 <field name="is_fusion_attribute"/>
@@ -44,7 +44,7 @@
             <field name="name" position="after">
                 <field name="fusion_parameter_name"/>
             </field>
-            <filter name="archived" position="before">
+            <filter name="inactive" position="before">
                 <filter string="Fusion Attributes" 
                         name="fusion_attributes" 
                         domain="[('is_fusion_attribute', '=', True)]"/>
