@@ -18,7 +18,6 @@
         </record>
 
         <!-- Record Rules -->
-        <!-- Read access for users with product access -->
         <record id="rule_fusion_component_product_user" model="ir.rule">
             <field name="name">Fusion Component Product User Access</field>
             <field name="model_id" ref="model_fusion_component"/>
@@ -30,7 +29,6 @@
             <field name="perm_unlink" eval="False"/>
         </record>
 
-        <!-- Full access for fusion editors -->
         <record id="rule_fusion_component_editor" model="ir.rule">
             <field name="name">Fusion Component Editor Access</field>
             <field name="model_id" ref="model_fusion_component"/>
@@ -42,7 +40,6 @@
             <field name="perm_unlink" eval="True"/>
         </record>
 
-        <!-- Settings access for fusion admins -->
         <record id="rule_fusion_settings_admin" model="ir.rule">
             <field name="name">Fusion Settings Admin Access</field>
             <field name="model_id" ref="model_res_config_settings"/>
