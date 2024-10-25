@@ -46,6 +46,7 @@
 
     <record id="action_fusion_components" model="ir.actions.act_window">
         <field name="name">Fusion Components</field>
+        <field name="type">ir.actions.act_window</field>
         <field name="res_model">fusion.component</field>
         <field name="view_mode">tree,form</field>
     </record>
