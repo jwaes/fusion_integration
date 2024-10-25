@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <menuitem id="menu_fusion" name="Fusion 360" parent="mrp.menu_mrp" sequence="50"/>
+        <menuitem id="menu_fusion" name="Fusion 360" parent="mrp.menu_mrp_root" sequence="50"/>
         <menuitem id="menu_fusion_components" name="Fusion Components" parent="menu_fusion" action="action_fusion_components" sequence="10" groups="fusion_integration.group_fusion_editor"/>
-        <menuitem id="menu_fusion_settings" name="Fusion Settings" parent="menu_fusion" action="action_fusion_settings" sequence="20" groups="fusion_integration.group_fusion_admin"/>
     </data>
 </odoo>
