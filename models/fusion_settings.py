@@ -1,4 +1,4 @@
-# Copyright 2024 Your Company Name
+# Copyright 2024 jaco tech
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 from odoo import fields, models
