@@ -44,12 +44,5 @@
                 </form>
             </field>
         </record>
-
-        <menuitem id="menu_fusion_components"
-                  name="Fusion Components"
-                  parent="mrp.menu_mrp_configuration"
-                  action="action_fusion_components"
-                  sequence="50"
-                  groups="fusion_integration.group_fusion_editor"/>
     </data>
 </odoo>

@@ -15,6 +15,7 @@
         'views/res_config_settings_views.xml',
         'views/product_attribute_views.xml',
         'views/fusion_component_views.xml',
+        'views/fusion_menu.xml',
     ],
     'demo': [],
     'test': [
