@@ -8,7 +8,7 @@
     'author': 'jaco tech',
     'website': 'https://jaco.tech',
     'license': 'AGPL-3',
-    'depends': ['mrp', 'base'],
+    'depends': ['mrp', 'base', 'web'],
     'data': [
         'security/fusion_security.xml',
         'security/ir.model.access.csv',

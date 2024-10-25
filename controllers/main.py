@@ -4,7 +4,7 @@ import json
 
 class FusionController(http.Controller):
     
-    @http.route('/fusion_api/component', type='json', auth='api_key')
+    @http.route('/fusion_api/component', type='json', auth='user')
     def create_component(self, **post):
         """API endpoint to create/update components from Fusion 360"""
         try:
