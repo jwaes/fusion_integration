@@ -8,11 +8,9 @@ class ResConfigSettings(models.TransientModel):
     """Settings configuration for Fusion 360 integration."""
     _inherit = 'res.config.settings'
 
-    fusion_default_folder_id = fields.Many2one(
-        'stock.location',
-        string='Default Folder for Fusion Products',
-        config_parameter='fusion_integration.default_folder_id',
-        domain="[('usage', '=', 'internal'), '|', "
-               "('company_id', '=', False), ('company_id', '=', company_id)]",
-        help='Default location for newly created products from Fusion 360'
+    fusion_default_category_id = fields.Many2one(
+        'product.category',
+        string='Default Category for Fusion Products',
+        config_parameter='fusion_integration.default_category_id',
+        help='Default category for newly created products from Fusion 360'
     )
