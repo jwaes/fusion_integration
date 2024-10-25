@@ -13,7 +13,7 @@ class FusionController(http.Controller):
         except Exception as e:
             return {'success': False, 'error': str(e)}
 
-    @http.route('/fusion_api/bom', type='json', auth='api_key')
+    @http.route('/fusion_api/bom', type='json', auth='user')
     def create_bom(self, **post):
         """API endpoint to create/update BOMs from Fusion 360"""
         try:
