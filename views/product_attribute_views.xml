@@ -6,14 +6,10 @@
         <field name="model">product.attribute</field>
         <field name="inherit_id" ref="product.attribute_tree_view"/>
         <field name="arch" type="xml">
-            <field name="name" position="attributes">
-                <attribute name="readonly">1</attribute>
-            </field>
             <field name="name" position="after">
                 <field name="is_fusion_attribute"/>
                 <field name="fusion_parameter_name" 
-                       attrs="{'invisible': [('is_fusion_attribute', '=', False)],
-                              'required': [('is_fusion_attribute', '=', True)]}"/>
+                       invisible="not is_fusion_attribute"/>
             </field>
         </field>
     </record>
@@ -25,15 +21,15 @@
         <field name="inherit_id" ref="product.product_attribute_view_form"/>
         <field name="arch" type="xml">
             <field name="name" position="attributes">
-                <attribute name="attrs">{'readonly': [('is_fusion_attribute', '=', True)]}</attribute>
+                <attribute name="readonly">is_fusion_attribute</attribute>
                 <attribute name="force_save">1</attribute>
             </field>
             <xpath expr="//sheet/group" position="inside">
                 <group name="fusion" string="Fusion 360">
                     <field name="is_fusion_attribute"/>
                     <field name="fusion_parameter_name" 
-                           attrs="{'invisible': [('is_fusion_attribute', '=', False)],
-                                  'required': [('is_fusion_attribute', '=', True)]}"/>
+                           invisible="not is_fusion_attribute"
+                           required="is_fusion_attribute"/>
                 </group>
             </xpath>
         </field>

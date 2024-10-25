@@ -9,7 +9,7 @@
             <app name="mrp" position="inside">
                 <block title="Fusion 360 Integration" name="fusion_setting_container">
                     <setting id="fusion_default_folder" help=" Default location for newly created products from Fusion 360">
-                        <field name="fusion_default_folder_id" class="o_light_label"/>
+                        <field name="fusion_default_folder_id"/>
                     </setting>
                 </block>
             </app>
